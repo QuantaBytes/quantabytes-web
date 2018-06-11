@@ -1,1 +1,101 @@
-<meta http-equiv="refresh" content="0;URL='network_analyst.html'" />
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>QuantaBytes</title>
+    <meta name="description" content="Bitcoin analysis made simple.">
+    <meta name="keywords" content="bitcoin,blockchain,cryptocurrency,analysis,visualization,forensics,research">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <div id="main">
+      <h1>A Network Analyst's View of the Block Chain</h1>
+
+      <p><strong><a href="http://www.coindesk.com/network-analysts-view-block-chain">This article was published at CoinDesk</a>.</strong></p>
+
+      <p>The block chain is a decentralized, consensus-driven ledger of every successful bitcoin transaction to date. As of the 300,000th block, the ledger includes over 38 million transactions.</p>
+
+      <p>Aside from being a monumental technical achievement, the block chain is a fascinating dataset. We can use it to create a transaction network that models the flow of bitcoins from the creation of the genesis block to the present day.</p>
+
+      <p>In this network, every node represents a transaction and every (directed) edge represents a flow of bitcoins from an output of one transaction to an input of another. This large, complex network has over 38 million nodes and 85 million edges.</p>
+
+      <div style="text-align: center;">
+	<a href="/assets/network-analyst/transaction-network.png"><img src="../img/network-analyst/transaction-network.png" title="The transaction network represents the flow of bitcoins between transactions over time."></a>
+      </div>
+
+      <h2>Network Science</h2>
+
+      <p><a href="http://en.wikipedia.org/wiki/Network_science">Network science</a> is the study of complex networks. It provides theories, techniques and tools that help us understand the structure and evolution of a network. The bitcoin transaction network is a prime example. Its basic building block, the transaction, can be combined to produce complex transfers of value. This is reflected in the topological structure of the transaction network.</p>
+
+      <p>The network as a whole is too large and complex for most network visualization tools. However, we can measure various structural properties of the network. For example, transactions can be characterized by their varying numbers of inputs and outputs. But how are these numbers distributed in practice? In the transaction network, we can analyze the in- and out-degrees of the nodes. We can plot the in- and out-degree distributions. They show, for each possible degree, the number of times they occur in the network.</p>
+
+      <div style="text-align: center;">
+	<a href="/assets/network-analyst/transaction-network-in-degree-distribution.png"><img src="../img/network-analyst/transaction-network-in-degree-distribution.png" title="The in-degree distribution of the transaction network."></a>
+      </div>
+
+      <div style="text-align: center;">
+	<a href="/assets/network-analyst/transaction-network-out-degree-distribution.png"><img src="../img/network-analyst/transaction-network-out-degree-distribution.png" title="The out-degree distribution of the transaction network."></a>
+      </div>
+
+      <p>In both cases, we observe inverse relationships between these numbers. The lower the degree, the more frequently nodes with that degree occur; the higher the degree, the less frequently they occur. There are many outliers. The outlier in the out-degree distribution with out-degree equal to two is due to an abundance of transactions with exactly two outputs.</p>
+
+      <h2>Giant Connected Component</h2>
+
+      <p>Suppose we were able to visualize the entire bitcoin transaction network. It would probably resemble a &quot;hairball&quot;. These visualizations suffer from cluttering and over-plotting to an extreme that makes them unusable for any practical purposes. However, they do provide one key piece of information. Are we dealing with one large connected component or several smaller connected components?</p>
+
+      <div style="text-align: center;">
+	<a href="/assets/network-analyst/hairball.png"><img src="../img/network-analyst/hairball.png" title="Many visualizations of large networks are hairballs."></a>
+      </div>
+
+      <p>A connected component is a group of nodes and edges that are all connected to each other, either directly or indirectly. If a network has a giant connected component, this means that almost every node is reachable from almost every other node. If we ignore the direction of the edges in the bitcoin transaction network, then it does indeed contain a giant connected component covering over 99.9% of all nodes. The second largest connected component has just 71 nodes.</p>
+
+      <h2>Fourteen Degrees of Separation</h2>
+
+      <p><a href="http://en.wikipedia.org/wiki/Six_degrees_of_separation">Six degrees of separation</a> is the theory that everyone on the planet is connected to everyone else through a chain of acquaintances with no more than six hops. In network science terminology, this translates to the theory that the social network of the human race has diameter six. Facebook <a href="https://www.facebook.com/notes/facebook-data-team/anatomy-of-facebook/10150388519243859">reported</a> that the effective diameter (covering 90% of all pairs of users) of its social network is five and is decreasing with time.</p>
+
+      <p>The equivalent number for the bitcoin transaction network is fourteen and is increasing with time. That is, across 90% of all pairs of transactions, the shortest path between them in the transaction network (ignoring directionality) is at most fourteen hops. The increasing value is likely due to the fact that, unlike the Facebook social network, there is no <a href="http://en.wikipedia.org/wiki/Preferential_attachment">preferential attachment</a>. New nodes are connected to existing nodes whose corresponding transactions are not yet fully redeemed. In other words, the transaction network is growing at the frontier only.</p>
+
+      <h2>The First Currency with a Ledger</h2>
+
+      <p>Surprisingly, Bitcoin is not the first currency with a ledger from which we can model the transfer of value. The Tomamae-cho community currency was introduced into the Hokkaido Prefecture in Japan for a three-month period during 2004-05 in a bid to revitalize the local economy. The Tomamae-cho system involved gift-certificates that were re-usable and legally redeemable into yen. There was an entry space on the reverse of each certificate for recipients to record transaction dates, their names and addresses, and the purposes of use, up to a maximum of five recipients.</p>
+
+      <p>Researchers collected these certificates in order to derive a network structure that represented the flow of currency during the period. They showed, for example, that the network had <a href="http://en.wikipedia.org/wiki/Small-world_network">small world properties</a>.</p>
+
+      <div style="text-align: center;">
+	<a href="/assets/network-analyst/network-representation-of-a-community-currency.png"><img src="../img/network-analyst/network-representation-of-a-community-currency.png" title="A network representation of the transfer of value with a community currency. (Source: Network Analyses of the Circulation Flow of Community Currency, http://cc.econ.hokudai.ac.jp/en/system/files/nacfcc.pdf)"></a>
+      </div>
+
+      <p>The block chain is a digital equivalent to the Tomamae-cho certificates. It does not contain information such as names and addresses or the purposes of use. However, it has other properties that make it suitable for analyzing the transfer of value including its accuracy, size, and completeness.</p>
+
+      <p>The application of network analysis to the block chain is an under-explored, yet fascinating area. There are a handful of academic studies but very little in the way of software and tools to open it up to a wider audience. <a href="http://www.quantabytes.com">QuantaBytes</a> is developing a suite of tools for analyzing and visualizing Bitcoin&#39;s block chain. By understanding the structure and evolution of the block chain, we can better understand Bitcoin&#39;s usage patterns, economy, and the growth of the system as a whole.</p>
+    </div>
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+
+      <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-496232-12','auto');ga('send','pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
