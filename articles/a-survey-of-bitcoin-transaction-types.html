@@ -305,15 +305,14 @@
       download data to and from the
       blockchain. &quot;<span style="font-family: monospace;">OP_1
       OP_DATA_33 OP_DATA_33 OP_2 OP_CHECK_MULTISIG</span>&quot; is the
-      1-of-2 transaction type where the hashes of the public keys (or
-      Bitcoin addresses) are stored in a compressed formatis. This is
-      the next most popular form and it first occurred in
-      transaction <span style="font-family:
+      1-of-2 transaction type where the public keys are stored in
+      compressed format. This is the next most popular form and it
+      first occurred in transaction <span style="font-family:
       monospace;">274f8be3b7b9b1a220285f5f71f61e2691dd04df9d69bb02a8b3b85f91fb1857</span>. &quot;<span style="font-family:
       monospace;">OP_1 OP_DATA_65 OP_DATA_33 OP_2
-      OP_CHECK_MULTISIG</span>&quot; is nearly identical but stores
-      the first hash in a non-compressed format and the second hash in
-      a compressed format. It first occurred in
+      OP_CHECK_MULTISIG</span>&quot; is very similar but stores the
+      first public-key in the non-compressed format and the second
+      public-key in the compressed format. It first occurred in
       transaction <span style="font-family:
       monospace;">7a02df33eddfb9dbcc7988f980630297089454f13a8bd059ada4b7842e2d1615</span>
       and, as of block 290,000, remains unspent.</p>
@@ -340,10 +339,6 @@
 	OP_DATA_65 OP_DATA_65 OP_3
 	OP_CHECK_MULTISIG</span>: <span style="font-family:
 	monospace;">14237b92d26850730ffab1bfb138121e487ddde444734ef195eb7928102bc939</span></li>
-	<li><span style="font-family: monospace;">OP_DUP OP_HASH160
-	OP_0 OP_EQUALVERIFY
-	OP_CHECKSIG</span>: <span style="font-family:
-	monospace;">6d5088c138e2fbf4ea7a8c2cb1b57a76c4b0a5fab5f4c188696aad807a5ba6d8</span></li>
 	<li><span style="font-family: monospace;">OP_2 OP_DATA_65
 	OP_DATA_65 OP_2
 	OP_CHECK_MULTISIG</span>: <span style="font-family:
