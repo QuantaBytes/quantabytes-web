@@ -24,339 +24,339 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-    <div id="main">
-      <h1>Using the Blockchain to Estimate UpDown's Profitability</h1>
+	 <div id="main">
+	   <h1>Using the Blockchain to Estimate UpDown's Profitability</h1>
 
-      <p><a href="https://updown.bt">UpDown</a> is a popular Bitcoin
-      binary options platform. A player can take either an
-      &quot;up&quot; or &quot;down&quot; position on the price of an
-      asset (e.g. gold or oil), a currency-pair (e.g. EUR/USD) or even
-      something more esoteric (e.g. a random walk) where the resulting
-      payout is either some multiple of the amount wagered or
-      nothing. For example, UpDown offers a gold market. If you
-      believe the price of gold will increase in the next sixty
-      seconds, you can make a bet by sending bitcoins to the address
-      specifically for the Gold Up market. If you are correct, you
-      will receive 1.75 times the amount you wagered, otherwise you
-      receive nothing.</p>
+	   <p><a href="https://updown.bt">UpDown</a> is a popular Bitcoin
+	     binary options platform. A player can take either an
+	     &quot;up&quot; or &quot;down&quot; position on the price of an
+	     asset (e.g. gold or oil), a currency-pair (e.g. EUR/USD) or even
+	     something more esoteric (e.g. a random walk) where the resulting
+	     payout is either some multiple of the amount wagered or
+	     nothing. For example, UpDown offers a gold market. If you
+	     believe the price of gold will increase in the next sixty
+	     seconds, you can make a bet by sending bitcoins to the address
+	     specifically for the Gold Up market. If you are correct, you
+	     will receive 1.75 times the amount you wagered, otherwise you
+	     receive nothing.</p>
 
-      <p>Every bet and payout is recorded on the block chain. For each
-      market, we can identify the vast majority of relevant bets and
-      payouts and plot their cumulative value in bitcoins over
-      time. The following is one such plot for the Gold Up market from
-      its opening in mid-April 2014 to the end of May 2014:</p>
+	   <p>Every bet and payout is recorded on the block chain. For each
+	     market, we can identify the vast majority of relevant bets and
+	     payouts and plot their cumulative value in bitcoins over
+	     time. The following is one such plot for the Gold Up market from
+	     its opening in mid-April 2014 to the end of May 2014:</p>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <div style="text-align: center;">
-	<img height="600" width="750" src="../img/updown/gold-up.png" title="A plot of the estimated cumulative value of bets (green) vs. payouts (red) in bitcoins for the Gold Up market on UpDown from mid-April 2014 to the end of May 2014.">
-      </div>
+	   <div style="text-align: center;">
+	     <img height="600" width="750" src="../img/updown/gold-up.png" title="A plot of the estimated cumulative value of bets (green) vs. payouts (red) in bitcoins for the Gold Up market on UpDown from mid-April 2014 to the end of May 2014.">
+	   </div>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <p>For the period shown, we estimate that UpDown received 3,536
-      bets on the Gold Up market. The total amount wagered was 94.36
-      BTC. UpDown paid out 81.27 BTC in winnings and was left with a
-      profit of <b>13.09 BTC</b>. This does not include operating
-      costs. We can see from the plot that the market was profitable
-      from inception. We can also observe that this market was closed
-      at weekends.</p>
+	   <p>For the period shown, we estimate that UpDown received 3,536
+	     bets on the Gold Up market. The total amount wagered was 94.36
+	     BTC. UpDown paid out 81.27 BTC in winnings and was left with a
+	     profit of <b>13.09 BTC</b>. This does not include operating
+	     costs. We can see from the plot that the market was profitable
+	     from inception. We can also observe that this market was closed
+	     at weekends.</p>
 
-      <p>We can repeat the exercise for each market. The results are
-      summarised in the tables below. You can click on any of the
-      market names to see a similar plot to the one above.</p>
+	   <p>We can repeat the exercise for each market. The results are
+	     summarised in the tables below. You can click on any of the
+	     market names to see a similar plot to the one above.</p>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <table class="table-striped table-condensed" style="width: 100%;">
-	<thead>
-	  <tr>
-	    <td style="font-weight: bold;">Asset Markets</td>
-	    <td style="text-align: right; font-weight: bold;">#
-	    Bets</td>
-	    <td style="text-align: right; font-weight: bold;">Wagered
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Payouts
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Profit
-	    (BTC)</td>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-	    <td><a href="../img/updown/gold-up.png">Gold Up</a></td>
-	    <td style="text-align: right;">3,536</td>
-	    <td style="text-align: right;">94.35768169</td>
-	    <td style="text-align: right;">81.27439612</td>
-	    <td style="text-align: right;"><b>13.08328557</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/gold-down.png">Gold
-	    Down</a></td>
-	    <td style="text-align: right;">3,420</td>
-	    <td style="text-align: right;">87.95203982</td>
-	    <td style="text-align: right;">74.95382596</td>
-	    <td style="text-align: right;"><b>12.99821386</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/silver-up.png">Silver
-	    Up</a></td>
-	    <td style="text-align: right;">3,215</td>
-	    <td style="text-align: right;">104.04224196</td>
-	    <td style="text-align: right;">87.70476703</td>
-	    <td style="text-align: right;"><b>16.33747493</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/silver-down.png">Silver
-	    Down</a></td>
-	    <td style="text-align: right;">3,054</td>
-	    <td style="text-align: right;">79.77713535</td>
-	    <td style="text-align: right;">68.57847705</td>
-	    <td style="text-align: right;"><b>11.19865830</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/oil-up.png">Oil Up</a></td>
-	    <td style="text-align: right;">586</td>
-	    <td style="text-align: right;">14.80848748</td>
-	    <td style="text-align: right;">14.31758509</td>
-	    <td style="text-align: right;"><b>0.49090239</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/oil-down.png">Oil Down</a></td>
-	    <td style="text-align: right;">442</td>
-	    <td style="text-align: right;">12.33853876</td>
-	    <td style="text-align: right;">10.35946225</td>
-	    <td style="text-align: right;"><b>1.97907651</b></td>
-	  </tr>
-      </table>
+	   <table class="table-striped table-condensed" style="width: 100%;">
+	     <thead>
+	       <tr>
+		 <td style="font-weight: bold;">Asset Markets</td>
+		 <td style="text-align: right; font-weight: bold;">#
+		   Bets</td>
+		 <td style="text-align: right; font-weight: bold;">Wagered
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Payouts
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Profit
+		   (BTC)</td>
+	       </tr>
+	     </thead>
+	     <tbody>
+	       <tr>
+		 <td><a href="../img/updown/gold-up.png">Gold Up</a></td>
+		 <td style="text-align: right;">3,536</td>
+		 <td style="text-align: right;">94.35768169</td>
+		 <td style="text-align: right;">81.27439612</td>
+		 <td style="text-align: right;"><b>13.08328557</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/gold-down.png">Gold
+		     Down</a></td>
+		 <td style="text-align: right;">3,420</td>
+		 <td style="text-align: right;">87.95203982</td>
+		 <td style="text-align: right;">74.95382596</td>
+		 <td style="text-align: right;"><b>12.99821386</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/silver-up.png">Silver
+		     Up</a></td>
+		 <td style="text-align: right;">3,215</td>
+		 <td style="text-align: right;">104.04224196</td>
+		 <td style="text-align: right;">87.70476703</td>
+		 <td style="text-align: right;"><b>16.33747493</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/silver-down.png">Silver
+		     Down</a></td>
+		 <td style="text-align: right;">3,054</td>
+		 <td style="text-align: right;">79.77713535</td>
+		 <td style="text-align: right;">68.57847705</td>
+		 <td style="text-align: right;"><b>11.19865830</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/oil-up.png">Oil Up</a></td>
+		 <td style="text-align: right;">586</td>
+		 <td style="text-align: right;">14.80848748</td>
+		 <td style="text-align: right;">14.31758509</td>
+		 <td style="text-align: right;"><b>0.49090239</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/oil-down.png">Oil Down</a></td>
+		 <td style="text-align: right;">442</td>
+		 <td style="text-align: right;">12.33853876</td>
+		 <td style="text-align: right;">10.35946225</td>
+		 <td style="text-align: right;"><b>1.97907651</b></td>
+	       </tr>
+	   </table>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <table class="table-striped table-condensed" style="width: 100%;">
-	<thead>
-	  <tr>
-	    <td style="font-weight: bold;">Currency-Pair Markets</td>
-	    <td style="text-align: right; font-weight: bold;">#
-	    Bets</td>
-	    <td style="text-align: right; font-weight: bold;">Wagered
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Payouts
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Profit
-	    (BTC)</td>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-	    <td><a href="../img/updown/eurusd-up.png">EUR/USD
-	    Up</a></td>
-	    <td style="text-align: right;">3,293</td>
-	    <td style="text-align: right;">98.45726087</td>
-	    <td style="text-align: right;">85.94384575</td>
-	    <td style="text-align: right;"><b>12.51341512</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/eurusd-down.png">EUR/USD
-	    Down</a></td>
-	    <td style="text-align: right;">2,970</td>
-	    <td style="text-align: right;">63.16867601</td>
-	    <td style="text-align: right;">51.72954467</td>
-	    <td style="text-align: right;"><b>11.43913134</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/gbpusd-up.png">GBP/USD
-	    Up</a></td>
-	    <td style="text-align: right;">3,010</td>
-	    <td style="text-align: right;">57.11467860</td>
-	    <td style="text-align: right;">46.81658901</td>
-	    <td style="text-align: right;"><b>10.29808959</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/gbpusd-down.png">GBP/USD
-	    Down</a></td>
-	    <td style="text-align: right;">2,844</td>
-	    <td style="text-align: right;">54.40708202</td>
-	    <td style="text-align: right;">46.39458244</td>
-	    <td style="text-align: right;"><b>8.01249958</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/usdchf-up.png">USD/CHF
-	    Up</a></td>
-	    <td style="text-align: right;">2,764</td>
-	    <td style="text-align: right;">51.71120343</td>
-	    <td style="text-align: right;">39.91836947</td>
-	    <td style="text-align: right;"><b>11.79283396</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/usdchf-down.png">USD/CHF
-	    Down</a></td>
-	    <td style="text-align: right;">2,805</td>
-	    <td style="text-align: right;">51.61590052</td>
-	    <td style="text-align: right;">41.01838617</td>
-	    <td style="text-align: right;"><b>10.59751435</b></td>
-	  </tr>
+	   <table class="table-striped table-condensed" style="width: 100%;">
+	     <thead>
+	       <tr>
+		 <td style="font-weight: bold;">Currency-Pair Markets</td>
+		 <td style="text-align: right; font-weight: bold;">#
+		   Bets</td>
+		 <td style="text-align: right; font-weight: bold;">Wagered
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Payouts
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Profit
+		   (BTC)</td>
+	       </tr>
+	     </thead>
+	     <tbody>
+	       <tr>
+		 <td><a href="../img/updown/eurusd-up.png">EUR/USD
+		     Up</a></td>
+		 <td style="text-align: right;">3,293</td>
+		 <td style="text-align: right;">98.45726087</td>
+		 <td style="text-align: right;">85.94384575</td>
+		 <td style="text-align: right;"><b>12.51341512</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/eurusd-down.png">EUR/USD
+		     Down</a></td>
+		 <td style="text-align: right;">2,970</td>
+		 <td style="text-align: right;">63.16867601</td>
+		 <td style="text-align: right;">51.72954467</td>
+		 <td style="text-align: right;"><b>11.43913134</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/gbpusd-up.png">GBP/USD
+		     Up</a></td>
+		 <td style="text-align: right;">3,010</td>
+		 <td style="text-align: right;">57.11467860</td>
+		 <td style="text-align: right;">46.81658901</td>
+		 <td style="text-align: right;"><b>10.29808959</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/gbpusd-down.png">GBP/USD
+		     Down</a></td>
+		 <td style="text-align: right;">2,844</td>
+		 <td style="text-align: right;">54.40708202</td>
+		 <td style="text-align: right;">46.39458244</td>
+		 <td style="text-align: right;"><b>8.01249958</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/usdchf-up.png">USD/CHF
+		     Up</a></td>
+		 <td style="text-align: right;">2,764</td>
+		 <td style="text-align: right;">51.71120343</td>
+		 <td style="text-align: right;">39.91836947</td>
+		 <td style="text-align: right;"><b>11.79283396</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/usdchf-down.png">USD/CHF
+		     Down</a></td>
+		 <td style="text-align: right;">2,805</td>
+		 <td style="text-align: right;">51.61590052</td>
+		 <td style="text-align: right;">41.01838617</td>
+		 <td style="text-align: right;"><b>10.59751435</b></td>
+	       </tr>
 
-	  <tr>
-	    <td><a href="../img/updown/audusd-up.png">AUD/USD
-	    Up</a></td>
-	    <td style="text-align: right;">2,921</td>
-	    <td style="text-align: right;">53.83228691</td>
-	    <td style="text-align: right;">42.48009601</td>
-	    <td style="text-align: right;"><b>11.35219090</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/audusd-down.png">AUD/USD
-	    Down</a></td>
-	    <td style="text-align: right;">9,790</td>
-	    <td style="text-align: right;">190.67501382</td>
-	    <td style="text-align: right;">165.10146280</td>
-	    <td style="text-align: right;"><b>25.57355102</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/jpyusd-up.png">JPY/USD
-	    Up</a></td>
-	    <td style="text-align: right;">2,874</td>
-	    <td style="text-align: right;">55.25482414</td>
-	    <td style="text-align: right;">45.49762326</td>
-	    <td style="text-align: right;"><b>9.75720088</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/jpyusd-down.png">JPY/USD
-	    Down</a></td>
-	    <td style="text-align: right;">3,063</td>
-	    <td style="text-align: right;">59.17775206</td>
-	    <td style="text-align: right;">49.40593911</td>
-	    <td style="text-align: right;"><b>9.77181295</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/nzdusd-up.png">NZD/USD
-	    Up</a></td>
-	    <td style="text-align: right;">2,703</td>
-	    <td style="text-align: right;">50.23935205</td>
-	    <td style="text-align: right;">41.10382731</td>
-	    <td style="text-align: right;"><b>9.13552474</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/nzdusd-down.png">NZD/USD
-	    Down</a></td>
-	    <td style="text-align: right;">2,732</td>
-	    <td style="text-align: right;">51.48715990</td>
-	    <td style="text-align: right;">43.84757781</td>
-	    <td style="text-align: right;"><b>7.63958209</b></td>
-	  </tr>
-      </table>
+	       <tr>
+		 <td><a href="../img/updown/audusd-up.png">AUD/USD
+		     Up</a></td>
+		 <td style="text-align: right;">2,921</td>
+		 <td style="text-align: right;">53.83228691</td>
+		 <td style="text-align: right;">42.48009601</td>
+		 <td style="text-align: right;"><b>11.35219090</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/audusd-down.png">AUD/USD
+		     Down</a></td>
+		 <td style="text-align: right;">9,790</td>
+		 <td style="text-align: right;">190.67501382</td>
+		 <td style="text-align: right;">165.10146280</td>
+		 <td style="text-align: right;"><b>25.57355102</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/jpyusd-up.png">JPY/USD
+		     Up</a></td>
+		 <td style="text-align: right;">2,874</td>
+		 <td style="text-align: right;">55.25482414</td>
+		 <td style="text-align: right;">45.49762326</td>
+		 <td style="text-align: right;"><b>9.75720088</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/jpyusd-down.png">JPY/USD
+		     Down</a></td>
+		 <td style="text-align: right;">3,063</td>
+		 <td style="text-align: right;">59.17775206</td>
+		 <td style="text-align: right;">49.40593911</td>
+		 <td style="text-align: right;"><b>9.77181295</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/nzdusd-up.png">NZD/USD
+		     Up</a></td>
+		 <td style="text-align: right;">2,703</td>
+		 <td style="text-align: right;">50.23935205</td>
+		 <td style="text-align: right;">41.10382731</td>
+		 <td style="text-align: right;"><b>9.13552474</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/nzdusd-down.png">NZD/USD
+		     Down</a></td>
+		 <td style="text-align: right;">2,732</td>
+		 <td style="text-align: right;">51.48715990</td>
+		 <td style="text-align: right;">43.84757781</td>
+		 <td style="text-align: right;"><b>7.63958209</b></td>
+	       </tr>
+	   </table>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <table class="table-striped table-condensed" style="width: 100%;">
-	<thead>
-	  <tr>
-	    <td style="font-weight: bold;">Novelty Markets</td>
-	    <td style="text-align: right; font-weight: bold;">#
-	    Bets</td>
-	    <td style="text-align: right; font-weight: bold;">Wagered
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Payouts
-	    (BTC)</td>
-	    <td style="text-align: right; font-weight: bold;">Profit
-	    (BTC)</td>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-	    <td><a href="../img/updown/planes-up.png">Planes in the
-	    Air Up</a></td>
-	    <td style="text-align: right;">1,459</td>
-	    <td style="text-align: right;">68.10460676</td>
-	    <td style="text-align: right;">53.39359623</td>
-	    <td style="text-align: right;"><b>14.71101053</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/planes-down.png">Planes in the
-	    Air Down</a></td>
-	    <td style="text-align: right;">3,909</td>
-	    <td style="text-align: right;">87.62287060</td>
-	    <td style="text-align: right;">60.82408107</td>
-	    <td style="text-align: right;"><b>26.79878953</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/white-noise-up.png">White Noise
-	    Up</a></td>
-	    <td style="text-align: right;">4,279</td>
-	    <td style="text-align: right;">87.52495407</td>
-	    <td style="text-align: right;">74.89993607</td>
-	    <td style="text-align: right;"><b>12.62501800</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/white-noise-down.png">White
-	    Noise Down</a></td>
-	    <td style="text-align: right;">4,363</td>
-	    <td style="text-align: right;">88.96360352</td>
-	    <td style="text-align: right;">77.79944896</td>
-	    <td style="text-align: right;"><b>11.16415456</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/random-walk-up.png">Random Walk
-	    Up</a></td>
-	    <td style="text-align: right;">4,594</td>
-	    <td style="text-align: right;">109.58409857</td>
-	    <td style="text-align: right;">94.64430783</td>
-	    <td style="text-align: right;"><b>14.93979074</b></td>
-	  </tr>
-	  <tr>
-	    <td><a href="../img/updown/random-walk-down.png">Random
-	    Walk Down</a></td>
-	    <td style="text-align: right;">4,339</td>
-	    <td style="text-align: right;">87.07268781</td>
-	    <td style="text-align: right;">77.61538650</td>
-	    <td style="text-align: right;"><b>9.45730131</b></td>
-	  </tr>
-      </table>
+	   <table class="table-striped table-condensed" style="width: 100%;">
+	     <thead>
+	       <tr>
+		 <td style="font-weight: bold;">Novelty Markets</td>
+		 <td style="text-align: right; font-weight: bold;">#
+		   Bets</td>
+		 <td style="text-align: right; font-weight: bold;">Wagered
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Payouts
+		   (BTC)</td>
+		 <td style="text-align: right; font-weight: bold;">Profit
+		   (BTC)</td>
+	       </tr>
+	     </thead>
+	     <tbody>
+	       <tr>
+		 <td><a href="../img/updown/planes-up.png">Planes in the
+		     Air Up</a></td>
+		 <td style="text-align: right;">1,459</td>
+		 <td style="text-align: right;">68.10460676</td>
+		 <td style="text-align: right;">53.39359623</td>
+		 <td style="text-align: right;"><b>14.71101053</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/planes-down.png">Planes in the
+		     Air Down</a></td>
+		 <td style="text-align: right;">3,909</td>
+		 <td style="text-align: right;">87.62287060</td>
+		 <td style="text-align: right;">60.82408107</td>
+		 <td style="text-align: right;"><b>26.79878953</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/white-noise-up.png">White Noise
+		     Up</a></td>
+		 <td style="text-align: right;">4,279</td>
+		 <td style="text-align: right;">87.52495407</td>
+		 <td style="text-align: right;">74.89993607</td>
+		 <td style="text-align: right;"><b>12.62501800</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/white-noise-down.png">White
+		     Noise Down</a></td>
+		 <td style="text-align: right;">4,363</td>
+		 <td style="text-align: right;">88.96360352</td>
+		 <td style="text-align: right;">77.79944896</td>
+		 <td style="text-align: right;"><b>11.16415456</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/random-walk-up.png">Random Walk
+		     Up</a></td>
+		 <td style="text-align: right;">4,594</td>
+		 <td style="text-align: right;">109.58409857</td>
+		 <td style="text-align: right;">94.64430783</td>
+		 <td style="text-align: right;"><b>14.93979074</b></td>
+	       </tr>
+	       <tr>
+		 <td><a href="../img/updown/random-walk-down.png">Random
+		     Walk Down</a></td>
+		 <td style="text-align: right;">4,339</td>
+		 <td style="text-align: right;">87.07268781</td>
+		 <td style="text-align: right;">77.61538650</td>
+		 <td style="text-align: right;"><b>9.45730131</b></td>
+	       </tr>
+	   </table>
 
-      <p><br></p>
+	   <p><br></p>
 
-      <p>In total, we estimate that UpDown received 78,965 bets from
-      mid-April 2014 to the end of May 2014. Players wagered 1,759.28
-      BTC and UpDown paid out 1,474.57 BTC in winnings. This leaves a
-      profit of <b>284.81 BTC</b> before operating expenses. This is
-      an estimate based entirely on publicly available information:
-      the addresses are shown on UpDown&#39;s website along with
-      enough information to identify payouts and the transactions are
-      all available on the block chain.</p>
+	   <p>In total, we estimate that UpDown received 78,965 bets from
+	     mid-April 2014 to the end of May 2014. Players wagered 1,759.28
+	     BTC and UpDown paid out 1,474.57 BTC in winnings. This leaves a
+	     profit of <b>284.81 BTC</b> before operating expenses. This is
+	     an estimate based entirely on publicly available information:
+	     the addresses are shown on UpDown&#39;s website along with
+	     enough information to identify payouts and the transactions are
+	     all available on the block chain.</p>
 
-      <p>This is a sample analysis. It can be extended to the present
-      day. However, the available markets, the payout multiples and
-      the addresses occasionally change. There is also evidence of
-      double-spending attacks against UpDown&#39;s service which
-      require more careful analysis. It is possible to extend this
-      analysis in many other ways, for example, to estimate the number
-      of repeat players, identify lucky and unlucky streaks, or
-      identify martingales.</p>
+	   <p>This is a sample analysis. It can be extended to the present
+	     day. However, the available markets, the payout multiples and
+	     the addresses occasionally change. There is also evidence of
+	     double-spending attacks against UpDown&#39;s service which
+	     require more careful analysis. It is possible to extend this
+	     analysis in many other ways, for example, to estimate the number
+	     of repeat players, identify lucky and unlucky streaks, or
+	     identify martingales.</p>
 
-      <h3>A Note on Financial Privacy</h3>
+	   <h3>A Note on Financial Privacy</h3>
 
-      <p>The block chain is, in many ways, a double-edged sword for
-      financial privacy. It allows us to conduct a financial
-      transaction with anyone else in the world without the need to
-      divulge identifying information to an intermediary. However, it
-      does require that we broadcast the transaction to the world. The
-      contents of the transaction, its relationship with other
-      transactions, and the act of broadcasting the transaction itself
-      combine to muddy the issue.</p>
-    </div>
+	   <p>The block chain is, in many ways, a double-edged sword for
+	     financial privacy. It allows us to conduct a financial
+	     transaction with anyone else in the world without the need to
+	     divulge identifying information to an intermediary. However, it
+	     does require that we broadcast the transaction to the world. The
+	     contents of the transaction, its relationship with other
+	     transactions, and the act of broadcasting the transaction itself
+	     combine to muddy the issue.</p>
+	 </div>
 
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-      <script src="js/plugins.js"></script>
-      <script src="js/main.js"></script>
+	 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+	 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+	 <script src="js/plugins.js"></script>
+	 <script src="js/main.js"></script>
 
-      <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-496232-12','auto');ga('send','pageview')
-      </script>
-      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	 <script>
+           window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+           ga('create','UA-496232-12','auto');ga('send','pageview')
+	 </script>
+	 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>
